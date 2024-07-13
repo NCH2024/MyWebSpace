@@ -2,7 +2,7 @@ body {
     background-image: url(../image/bcg/bcg_01.avif);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 100%;
+    background-position: center center;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
