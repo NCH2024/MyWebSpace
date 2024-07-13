@@ -1,4 +1,6 @@
 body {
+    width: 100vw;
+    height: 100vh;
     background-image: url(../image/bcg/bcg_01.avif);
     background-repeat: no-repeat;
     background-size: cover;
