@@ -13,9 +13,10 @@ body {
 }
 
 /* Font tittle: 
-    font-family: "Poetsen One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 */
 
 /*=========================== common ===========================*/
@@ -57,6 +58,16 @@ a {
     width: 5rem;
 }
 
+.body p {
+    color: #475168;
+    padding: 0.4rem 2.1rem;
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
+    flex-shrink: 0;
+    font-weight: 700;
+}
+
+
 .header .body {
     display: flex;
     align-items: center;
@@ -73,7 +84,6 @@ a {
 
 .nav a {
     color: #475168;
-
     padding: 0.8rem 2.1rem;
 }
 
