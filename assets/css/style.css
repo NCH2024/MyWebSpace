@@ -21,6 +21,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
 /*=========================== common ===========================*/
@@ -113,171 +114,107 @@ a {
 }
 
 /*=========================== hero ===========================*/
-
 .hero {
-    padding: 5.6rem 0 6.5rem;
     background-color: var(--bcg-color);
+}
+
+.hero .main-content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .hero .body {
+    padding: 5rem;
+    width: 100%;
+    height: 50rem;
     display: flex;
-    flex-flow: column;
-    max-width: 117rem;
-    justify-content: center;
-    align-items: center;
-}
-
-/*=========================== hero before ===========================*/
-.hero .media-block {
     background-color: var(--bcg-color);
-    background-image: url(./assets/image/bcg/bcg_03.jpg);
+    background-image: url(/assets/image/bcg/bcg_04.jpg);
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
-    -webkit-box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
-    height: 100%;
-    width: 100%;
-    position: relative;
+    border: var(--cd-color-opacity) 2px solid;
+    box-shadow: 0px 10px 40px 10px var(--primary-color);
 }
 
-.hero .media-block .img {
-    max-width: 30%;
+/*======================= Hero left =========================*/
+.hero .hero-left {
     width: 30%;
-    height: 40%;
-    display: block;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-self: center;
+    align-items: center;
+}
+
+
+.hero .hero-avatar {
+    display: flex;
+    justify-self: center;
+    align-self: center;
     object-fit: cover;
-    margin: auto;
-    border-radius: 10% 30% 10% 30%;
-    border: var(--secondly-color) 1px solid;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-.hero .hero-summary {
-    position: absolute;
-    bottom: 15%;
-    left: 55%;
-    right: 0;
-    text-shadow: 1px 1px 2px var(--cd-color-opacity), 0 0 1em var(--secondly-color);
+.hero .hero-avatar .img {
+    width: 20rem;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(21px 11px 19px var(--primary-color));
 }
 
-.hero-summary .item {
+.hero .info-summary {
+    background-color: var(--secondly-color);
+    border-radius: 10px;
+    backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.5rem);
+    flex-basis: 15rem;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.hero .item {
     display: flex;
     align-items: center;
-    width: 60%;
-    border-radius: 999px;
-    background-color: var(--cd-color-opacity);
-    backdrop-filter: blur(2rem);
-    -webkit-backdrop-filter: blur(2rem);
-    border: var(--bcg-color-opacity) 1px solid;
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    -webkit-box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    justify-self: center;
+    margin: 2rem;
 }
 
-.hero-summary .item+.item {
+.hero .item:first-Child {
     margin-top: 1rem;
 }
 
+.hero .icon {
+    padding-left: 1rem;
+    flex-basis: 15rem;
+    max-width: 15%;
+}
 
-.hero-summary .bcg-icon {
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 50%;
+.hero .fix-icon {
+    width: calc(100% - 0.8rem);
+    height: calc(100% - 0.8rem);
     display: flex;
-    justify-content: center;
+    justify-self: center;
     align-items: center;
-    background-color: var(--bcg-color);
-    box-shadow: 1px 1px 2px var(--cd-color-opacity), 0 0 1em var(--secondly-color), 0 0 0.2em var(--secondly-color);
-    -webkit-box-shadow: 1px 1px 2px var(--cd-color-opacity), 0 0 1em var(--secondly-color), 0 0 0.2em var(--secondly-color);
 }
 
-.hero-summary .icon {
-    height: 1.5rem;
-    width: 1.5rem;
+.hero .label {
+    margin-left: 0.5rem;
 }
 
-.hero-summary .info {
-    margin-left: 1rem;
-}
-
-.hero-summary .label {
+.hero .note {
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--pr-color-opacity);
-    font-size: 40%;
-    font-weight: 500;
-    line-height: 1.5;
 }
 
-.hero-summary .tittle {
+.hero .content {
+    font-size: 1.6rem;
+    font-weight: 600;
     color: var(--primary-color);
-    font-size: 66%;
-    font-weight: 700;
-    line-height: 1;
 }
 
-/*=========================== hero after ===========================*/
-.hero .content-block {
+/*======================= hero right =======================*/
+.hero .hero-right {
+    border: #000512 1px solid;
     width: 70%;
     height: auto;
-    padding-left: 2rem;
-    padding-top: 4.5rem;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero .heading {
-    color: var(--primary-color);
-    font-family: var(--font-heading);
-    font-size: 3.2rem;
-    line-height: 1.17;
-    font-weight: 400;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    display: inline-block;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-.hero .desc {
-    color: var(--pr-color-opacity);
-    font-size: 1.8rem;
-    line-height: 1.67;
-}
-
-.hero .btn-see-story {
-    margin-top: 3.8rem;
-    background-color: var(--section-color);
-    text-shadow: var(--primary-color) 1px 0 10px;
-
-}
-
-.btn-see-story:hover {
-    background-color: var(--primary-color);
-    text-shadow: var(--section-color) 1px 0 10px;
-    transition: all 300ms linear;
-}
-
-.desc-other {
-    margin-top: 4.8rem;
-    align-self: center;
-}
-
-.hero .stats {
-    margin-top: 8px;
-    align-self: center;
-}
-
-.hero .stats strong {
-    margin-right: 15px;
-    color: var(--primary-color);
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.23;
-}
-
-.hero .stats strong:nth-child(2) {
-    margin-left: 3rem;
 }
