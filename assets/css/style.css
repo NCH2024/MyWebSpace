@@ -130,7 +130,7 @@ a {
 /*=========================== hero before ===========================*/
 .hero .media-block {
     background-color: var(--bcg-color);
-    background-image: url(/assets/image/bcg/bcg_03.jpg);
+    background-image: url(./assets/image/bcg/bcg_03.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
