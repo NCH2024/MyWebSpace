@@ -121,64 +121,68 @@ a {
 
 .hero .body {
     display: flex;
+    flex-flow: column;
+    max-width: 117rem;
+    justify-content: center;
+    align-items: center;
 }
 
-/*=========================== hero left ===========================*/
+/*=========================== hero before ===========================*/
 .hero .media-block {
-    width: 48%;
+    background-color: var(--bcg-color);
+    background-image: url(/assets/image/bcg/bcg_03.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+    -webkit-box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+    height: 100%;
+    width: 100%;
     position: relative;
 }
 
 .hero .media-block .img {
-    width: calc(100% - 4.7rem);
-    height: calc(100% - 6.85rem);
-
+    max-width: 30%;
+    width: 30%;
+    height: 40%;
+    display: block;
     object-fit: cover;
-    border-radius: 2rem;
-    box-shadow: 0.5rem 0.5rem 2rem var(--primary-color);
-    -webkit-box-shadow: 0.5rem 0.5rem 2rem var(--primary-color);
-    text-shadow: 1px 1px 2px var(--cd-color-opacity), 0 0 1em var(--secondly-color);
+    margin: auto;
+    border-radius: 10% 30% 10% 30%;
+    border: var(--secondly-color) 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-
-
-.hero .content-block {
-    width: 52%;
-}
-
 
 .hero .hero-summary {
     position: absolute;
-    bottom: 4.8rem;
+    bottom: 15%;
+    left: 55%;
     right: 0;
-    background-color: var(--cd-color-opacity);
-    backdrop-filter: blur(2rem);
-    -webkit-backdrop-filter: blur(2rem);
-    padding: 2.4rem;
-    border-radius: 2rem;
-    box-shadow: 0.5rem 0.5rem 2rem var(--primary-color);
-    -webkit-box-shadow: 0.5rem 0.5rem 2rem var(--primary-color);
-
-}
-
-.hero .hero-summary:hover {
-    border: 1px solid var(--secondly-color);
     text-shadow: 1px 1px 2px var(--cd-color-opacity), 0 0 1em var(--secondly-color);
-    transition: all 800ms ease;
 }
 
 .hero-summary .item {
     display: flex;
     align-items: center;
+    width: 60%;
+    border-radius: 999px;
+    background-color: var(--cd-color-opacity);
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+    border: var(--bcg-color-opacity) 1px solid;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    -webkit-box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 
 .hero-summary .item+.item {
-    margin-top: 2.2rem;
+    margin-top: 1rem;
 }
 
 
 .hero-summary .bcg-icon {
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 3.2rem;
+    height: 3.2rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -189,33 +193,34 @@ a {
 }
 
 .hero-summary .icon {
-    height: 3rem;
-    width: 3rem;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 .hero-summary .info {
-    margin-left: 1.6rem;
+    margin-left: 1rem;
 }
 
 .hero-summary .label {
     color: var(--pr-color-opacity);
-    font-size: 1.4rem;
+    font-size: 40%;
     font-weight: 500;
-    line-height: 1.86;
+    line-height: 1.5;
 }
 
 .hero-summary .tittle {
     color: var(--primary-color);
-    font-size: 1.8rem;
+    font-size: 66%;
     font-weight: 700;
-    line-height: 1.66;
+    line-height: 1;
 }
 
-/*=========================== hero right ===========================*/
+/*=========================== hero after ===========================*/
 .hero .content-block {
-    width: 52%;
+    width: 70%;
+    height: auto;
     padding-left: 2rem;
-    padding-top: 6.4rem;
+    padding-top: 4.5rem;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -228,7 +233,6 @@ a {
     font-size: 3.2rem;
     line-height: 1.17;
     font-weight: 400;
-    letter-spacing: -1.16px;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     display: inline-block;
     color: transparent;
@@ -257,12 +261,12 @@ a {
 
 .desc-other {
     margin-top: 4.8rem;
-    align-self: flex-start;
+    align-self: center;
 }
 
 .hero .stats {
     margin-top: 8px;
-    align-self: self-start;
+    align-self: center;
 }
 
 .hero .stats strong {
