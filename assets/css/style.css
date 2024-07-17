@@ -130,7 +130,7 @@ a {
     height: calc(100% - 50rem);
     display: flex;
     background-color: var(--bcg-color);
-    background-image: url(./assets/image/bcg/bcg_04.jpg);
+    background-image: url(../image/bcg/bcg_04.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
