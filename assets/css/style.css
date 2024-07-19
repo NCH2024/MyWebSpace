@@ -48,6 +48,28 @@ a {
     background: var(--primary-color);
 }
 
+.heading-lv2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #d9fff1;
+    text-align: left;
+    display: inline-block;
+    background-color: #4158D0;
+    background-image: linear-gradient(90deg, rgba(251, 63, 63, 1) 0%, rgba(63, 251, 154, 1) 13%, rgba(229, 90, 156, 1) 27%, rgba(202, 86, 86, 1) 45%, rgba(80, 172, 166, 1) 51%, rgba(94, 119, 149, 1) 53%, rgba(113, 216, 75, 1) 65%, rgba(209, 84, 181, 1) 80%, rgba(63, 251, 179, 1) 91%, rgba(251, 63, 63, 1) 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding-bottom: 2.5rem;
+    animation: animated 10s linear infinite;
+}
+
+@keyframes animated {
+    to {
+        background-position-x: 200rem;
+    }
+}
+
 /*=========================== header ===========================*/
 .header {
     background: var(--bcg-color);
@@ -121,7 +143,7 @@ a {
 
 .hero .main-content {
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 15rem;
 }
 
 .hero .body {
@@ -144,8 +166,6 @@ a {
     height: auto;
     display: flex;
     flex-flow: column;
-    justify-self: center;
-    align-items: center;
 }
 
 
@@ -232,11 +252,13 @@ a {
     padding-bottom: 3rem;
     text-align: center;
     display: inline-block;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-color: #ffffff;
+    background-image: linear-gradient(90deg, #ffffff 0%, #4158D0 17%, #C850C0 39%, #FFCC70 60%, #00fec3 80%, #ffffff 100%);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    animation: animated 20s linear infinite;
+
 }
 
 .hero .hero-right p {
@@ -279,4 +301,91 @@ a {
     text-align: center;
     text-indent: -2.5rem;
 
+}
+
+/*=======================bulkhead===========================*/
+
+.bulkhead {
+    display: flex;
+    height: auto;
+    max-width: auto;
+    background-color: var(--primary-color);
+}
+
+.bulkhead .logo-2 {
+    height: 5rem;
+    width: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*======================= about me =======================*/
+.about-me {
+    background-color: var(--bcg-color);
+}
+
+.about-me .main-content {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.about-me .body {
+    padding: 5rem;
+    width: 100%;
+    height: calc(100% - 50rem);
+    background-color: var(--bcg-color);
+    background-image: url(../image/bcg/bcg_01.avif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: var(--cd-color-opacity) 2px solid;
+    box-shadow: 0px 10px 40px 10px var(--primary-color);
+}
+
+.about-me img {
+    width: 20rem;
+    border-radius: 50%;
+    border: var(--secondly-color) 2px solid;
+    box-shadow: 0px 10px 40px 10px var(--bcg-color-opacity);
+}
+
+.about-me .content-summary {
+    margin: 2rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--secondly-color);
+    margin-left: 8rem;
+    margin-right: 10rem;
+    ;
+}
+
+.about-me .btn-ab {
+    flex-basis: 40rem;
+    align-self: center;
+    background-color: var(--section-color);
+    color: var(--primary-color);
+    text-shadow: var(--primary-color) 1px 0 10px;
+}
+
+.about-me .btn-ab:hover {
+    background-color: var(--primary-color);
+    color: var(--section-color);
+    text-shadow: var(--section-color) 1px 0 10px;
+    transition: all 400ms ease;
+}
+
+/*=================== about me left ========================*/
+.about-me .a-me-before {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*=================== about me right ========================*/
+.about-me .a-me-after {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10rem;
 }
